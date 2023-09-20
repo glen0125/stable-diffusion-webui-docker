@@ -1,11 +1,11 @@
 ## Prepare the directory mapping in your host:
 ```
-mkdir -p /MY-DATA-DIR && cd /MY-DATA-DIR
+mkdir -p /LOCAL-SD && cd /LOCAL-SD
 mkdir models outputs
 sudo chown 10000:$UID -R models outputs
 sudo chmod 775 -R models outputs
 ```
-It is recommended to download [v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/v1-5-pruned-emaonly.safetensors) and place it in the /MY-DATA-DIR/models/Stable-diffusion directory to improve loading speed.
+It is recommended to download [v1-5-pruned-emaonly.safetensors](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/v1-5-pruned-emaonly.safetensors) and place it in the /LOCAL-SD/models/Stable-diffusion directory to improve loading speed.
 
 
 ## Run with api
