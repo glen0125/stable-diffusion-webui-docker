@@ -4,4 +4,4 @@ USER app
 
 WORKDIR /app/stable-diffusion-webui
 
-CMD ["venv/bin/python", "-u", "webui.py", "--listen", "--port", "7862", "--api"]
+ENTRYPOINT ["venv/bin/python", "-u", "webui.py", "--api", "--port", "7862"]

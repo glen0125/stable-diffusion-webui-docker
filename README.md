@@ -15,6 +15,17 @@ docker run -d --name sdw --gpus all --network host \
   -v $(pwd)/outputs:/app/stable-diffusion-webui/outputs \
   --rm aios/stable-diffusion-webui-api
 ```
+This will start a container and listen at http://127.0.0.1:7862. If you want to listen on the address 0.0.0.0, please specify the --listen parameter. If you want to specify a port, please include the --port ${port} parameter. 
+
+e.g.
+
+```
+docker run -d --name sdw --gpus all --network host \
+  -v $(pwd)/models:/app/stable-diffusion-webui/models \
+  -v $(pwd)/outputs:/app/stable-diffusion-webui/outputs \
+  --rm aios/stable-diffusion-webui-api --listen --port 7860
+```
+This will start a container and listen at http://0.0.0.0:7860.
 
 ## build
 ```
